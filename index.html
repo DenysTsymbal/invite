@@ -25,7 +25,7 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     h1 {
-      color: #a36f51; /* теплий пастельний коричневий */
+      color: #a36f51;
       font-size: 2.8rem;
       margin-bottom: 0.2em;
       font-weight: 600;
@@ -48,6 +48,37 @@
       color: #aaa;
       margin-top: 3rem;
     }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+    input[type="tel"] {
+      width: 100%;
+      max-width: 250px;
+      padding: 10px 15px;
+      font-size: 1.1rem;
+      border: 2px solid #a36f51;
+      border-radius: 8px;
+      color: #333;
+      outline: none;
+      cursor: pointer;
+      margin: 0 auto 0.5rem;
+      display: block;
+      transition: border-color 0.3s ease;
+      text-align: center;
+    }
+    input[type="tel"]:focus {
+      border-color: #7a4e35;
+    }
+    .phone-note {
+      font-size: 0.9rem;
+      color: #777;
+      font-style: italic;
+      max-width: 300px;
+      margin: 0 auto 2rem;
+    }
   </style>
 </head>
 <body>
@@ -55,10 +86,17 @@
     <h1>Запрошення на наше весілля</h1>
     <p>Ми щасливі запросити вас на святкування нашого особливого дня!<br />
       Приєднуйтесь до нас, щоб поділитися радістю та любов’ю.</p>
-    <div class="date">Дата: 17 серпня 2025 року</div>
+    <div class="date">Дата: 12 серпня 2025 року</div>
     <p>Місце проведення:<br />
-      Вілла «Мандарин»<br />
+      «Мандарин»<br />
       Костопіль</p>
+
+    <label for="contact-phone">Контактний номер телефону:</label>
+    <a href="tel:+380966648477" style="text-decoration:none;">
+      <input type="tel" id="contact-phone" name="contact-phone" value="+38 (050) 123-45-67" readonly />
+    </a>
+    <div class="phone-note">Якщо вас не буде, будь ласка, передзвоніть за цим номером.</div>
+
     <div class="footer">Будемо раді бачити вас!</div>
   </div>
 </body>
